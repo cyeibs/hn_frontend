@@ -1,12 +1,27 @@
-<<<<<<< HEAD
-# React + Vite
+## Frontend Hacker News for vk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```
+Приложение разработано с использованием React + TanStack Query + RTK + MUI & CSS-Modules,
+хуков, также сделаны для демонстрации и оптимизации кода кастомные хуки для tanstack query,
+что полностью удовлетворяет продуктовым и техническим требованиям.
 
-Currently, two official plugins are available:
+p.s TypeScript не использовал, ибо в работе использовал его пока что мало, поэтому решил
+не отвлекать глаз ревьюера на ошибки в ts
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# hn_frontend
->>>>>>> ea2449a118ff1f43b86ae3a93822692cab599cbd
+<details>
+<summary>
+<strong>Настройка</strong>
+</summary><br/>
+
+
+  #### Установка необходимых зависимостей
+```
+* yarn install
+```
+
+  #### Запуск сервера
+```
+* yarn start
+```
+</details>
