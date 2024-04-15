@@ -1,0 +1,78 @@
+.main {
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 43, 54);
+  transition: box-shadow 300ms;
+  background-image: none;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px,
+    rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.cardContent {
+  padding: 0;
+}
+
+.rowStack {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  align-content: center;
+  padding: 16px 24px;
+  height: 100px;
+  border-bottom: 1px dashed rgba(145, 158, 171, 0.2);
+}
+
+.columnStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iconBox {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svgIcon {
+  display: flex;
+}
+
+.typographyRating,
+.typographyDetails,
+.typographySource,
+.typographyTime {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.linkDetails {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: rgb(99, 115, 129);
+}
+
+.textBox {
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-right: 24px;
+}

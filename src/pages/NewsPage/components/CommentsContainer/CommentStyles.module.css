@@ -1,0 +1,95 @@
+.main {
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.paddingBox {
+  padding: 16px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 43, 54);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: none;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px,
+    rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+  border-radius: 16px;
+  z-index: 0;
+  margin-bottom: 10px;
+}
+
+.cardContent {
+  padding: 0px;
+  padding-bottom: 0px;
+}
+
+.cardContent :last-child {
+  padding-bottom: 0px;
+}
+
+.stackDirectionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stackDirectionRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  align-content: center;
+  padding: 16px 24px;
+  border-bottom: 1px dashed rgba(145, 158, 171, 0.2);
+}
+
+.listItem {
+  flex: 1 1 auto;
+}
+
+.flexBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.typography {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(99, 115, 129);
+  flex-shrink: 0;
+  color: rgb(145, 158, 171);
+}
+
+.paddingX {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.commentBorder {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  align-content: center;
+  border-top: 1px dashed rgba(145, 158, 171, 0.2);
+}
+
+.innerPadding {
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.showMoreButton {
+  color: rgb(99, 115, 129);
+  padding: 0;
+  display: inline-block;
+}

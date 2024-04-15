@@ -1,0 +1,28 @@
+.container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+}
+
+.button {
+  min-width: 0;
+  color: #3c52b2;
+  padding: 0;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #fb651e;
+}
+
+.divider {
+  margin-left: 4px;
+  margin-right: 4px;
+}

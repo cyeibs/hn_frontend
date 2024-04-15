@@ -1,0 +1,64 @@
+.appBar {
+  background-color: transparent;
+  margin-top: 16px; /* my: 2 equivalent, assuming the theme's spacing unit is 8px */
+  margin-bottom: 16px;
+}
+
+.logoContainer {
+  flex-grow: 1;
+}
+
+.logoIcon {
+  min-height: 2em;
+  min-width: 7em;
+  max-width: 10em;
+  display: flex;
+}
+
+.menuButton {
+  padding: 0;
+  color: rgb(33, 43, 54);
+  background-image: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.menuIcon {
+  color: #fb651e;
+}
+
+.mobileMenu {
+  display: flex;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menuItem {
+  min-height: 0;
+}
+
+.menuItem:hover {
+  background-color: transparent;
+  color: #3c52b2;
+}
+
+.desktopMenu {
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.desktopButton {
+  color: #fb651e;
+  padding: 0;
+  display: inline-block;
+}
+
+.desktopButton:hover {
+  background-color: transparent;
+  color: #3c52b2;
+}
