@@ -13,7 +13,7 @@ import styles from "./styles/NewsPage.module.css";
 function NewsPage() {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
-  const { data, isPending, isError } = useCustomQuery({
+  const { data, isPending, isError, refetch } = useCustomQuery({
     queryFunction: fetchNewsItem,
     id,
   });
@@ -53,7 +53,9 @@ function NewsPage() {
                 </Box>
               </CardContent>
             </Card>
-            <CommentsContainer comments={data.children} />
+            {data.children.length > 0 && (
+              <CommentsContainer comments={data.children} refetch={refetch} />
+            )}
           </>
         )}
       </Container>

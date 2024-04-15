@@ -17,6 +17,11 @@
   z-index: 0;
 }
 
+.cardHeader {
+  padding: 1rem;
+  border-bottom: 1px dashed rgba(145, 158, 171, 0.2);
+}
+
 .cardContent {
   padding: 0px;
 }

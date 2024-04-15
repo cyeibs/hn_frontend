@@ -1,4 +1,11 @@
-import { Box, Button, Card, CardContent, Container } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Container,
+  Typography,
+} from "@mui/material";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import Alert from "../../shared/Alert/Alert";
@@ -10,13 +17,22 @@ import useLikeHandler from "./components/useLikeHandler";
 import styles from "./styles/NewsList.module.css";
 
 function NewsList() {
-  const { data, error, fetchNextPage, hasNextPage, isFetching, isLoading } =
-    useInfiniteQuery({
-      queryKey: ["replies"],
-      queryFn: getNewsList,
-      getNextPageParam: (lastPage) => lastPage.next,
-      getPreviousPageParam: (firstPage) => firstPage.previous,
-    });
+  const {
+    data,
+    error,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    isLoading,
+    refetch,
+  } = useInfiniteQuery({
+    queryKey: ["replies"],
+    queryFn: getNewsList,
+    getNextPageParam: (lastPage) => lastPage.next,
+    getPreviousPageParam: (firstPage) => firstPage.previous,
+    refetchInterval: 1 * 60 * 1000,
+    refetchOnWindowFocus: false,
+  });
 
   const newsArray = useMemo(
     () => data?.pages.reduce((acc, page) => [...acc, ...page.results], []),
@@ -40,6 +56,18 @@ function NewsList() {
         )}
         {newsArray && (
           <Card className={styles.card}>
+            <Box className={styles.cardHeader}>
+              <Button
+                onClick={refetch}
+                sx={{
+                  p: 0,
+                }}
+              >
+                <Typography variant="b2" className={styles.typographyHeader}>
+                  обновить
+                </Typography>
+              </Button>
+            </Box>
             <CardContent className={styles.cardContent}>
               {newsArray &&
                 newsArray.map((item, index) => (
